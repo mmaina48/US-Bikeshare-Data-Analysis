@@ -106,10 +106,9 @@ def time_stats(df):
     start_time = time.time()
 
     # TO DO: display the most common month
-    
     months = df['month'].values
     month_mode = stats.mode(months)
-    most_common_month_int = int(month_mode[0][0])
+    most_common_month_int = month_mode[0][0]
     months = ['january', 'february', 'march', 'april', 'may', 'june']
     common_month = months[most_common_month_int - 1]
     print("Most common month is", common_month)
@@ -178,7 +177,6 @@ def trip_duration_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
 def user_stats(df):
     """Displays statistics on bikeshare users."""
     print(df.info())
@@ -197,7 +195,6 @@ def user_stats(df):
     except: 
         print('dataframe has no "Gender column')
     
-
     # TO DO: Display earliest, most recent, and most common year of birth
     
     try:
