@@ -114,10 +114,9 @@ def time_stats(df):
     print("Most common month is", common_month)
 
     # TO DO: display the most common day of week
-    Days_of_week = df['day_of_week'].values
-    Days_of_week_mode = stats.mode(Days_of_week)
-    Common_day = Days_of_week_mode[0][0]
-    print("Most common day is", Common_day)
+    common_day_series = df.loc[:,"day_of_week"].mode()
+    common_day = common_day_series.values[0]
+    print("Most common day is", common_day)
     
     # TO DO: display the most common start hour
     hours = np.array(df['Start Time'].dt.hour)
