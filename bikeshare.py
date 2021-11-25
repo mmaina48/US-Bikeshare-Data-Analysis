@@ -217,6 +217,8 @@ def user_stats(df):
 
 def display_data(df):
     """Displays data row as per user input Yes or No"""
+    
+    # Get user input "Yes" or "No"
     view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n').lower()
     start_loc = 0
     row_count = 5
